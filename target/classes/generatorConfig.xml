@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+<properties resource="db.properties"/>
+<classPathEntry 
+		location="C:\Users\pc\Downloads\mysql-connector-java-8.0.23.jar"/>
+    <context id="mybatisGenerator" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="javaFileEncoding" value="utf-8"/>
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection connectionURL="${dataSource.jdbcUrl}" driverClass="${dataSource.driverClass}" password="${dataSource.password}" userId="${dataSource.user}"  />
+
+        <javaModelGenerator targetPackage="pojo" targetProject="travelZhongHua/src/main/java" />
+        <sqlMapGenerator targetPackage="dao" targetProject="travelZhongHua/src/main/java"/>
+        <javaClientGenerator targetPackage="dao" targetProject="travelZhongHua/src/main/java" type="XMLMAPPER" />
+        <table tableName="travels" domainObjectName="Travels"
+               enableCountByExample="false" selectByExampleQueryId="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"
+        />
+        <table tableName="view" domainObjectName="View"
+               enableCountByExample="false" selectByExampleQueryId="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"
+        />
+    </context>
+</generatorConfiguration>	
