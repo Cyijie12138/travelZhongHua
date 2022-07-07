@@ -1,6 +1,7 @@
 package pojo;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 @Controller
@@ -32,6 +33,11 @@ public class RequestResult<T>{
 	}
 	public void setData(List<T> data) {
 		this.data = data;
+	}
+	public void setMapData(List<Map> data) {
+		this.data = (List<T>) data;
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

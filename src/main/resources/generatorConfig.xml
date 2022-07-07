@@ -16,12 +16,7 @@
         <javaModelGenerator targetPackage="pojo" targetProject="travelZhongHua/src/main/java" />
         <sqlMapGenerator targetPackage="dao" targetProject="travelZhongHua/src/main/java"/>
         <javaClientGenerator targetPackage="dao" targetProject="travelZhongHua/src/main/java" type="XMLMAPPER" />
-        <table tableName="travels" domainObjectName="Travels"
-               enableCountByExample="false" selectByExampleQueryId="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false"
-        />
-        <table tableName="view" domainObjectName="View"
+        <table tableName="trail" domainObjectName="Trail"
                enableCountByExample="false" selectByExampleQueryId="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false"

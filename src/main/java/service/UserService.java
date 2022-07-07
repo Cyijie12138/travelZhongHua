@@ -1,5 +1,6 @@
 package service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +30,16 @@ public class UserService {
 
 	public int userInsert(User user) {
 		// TODO Auto-generated method stub
-		int result = userMapper.insert(user);
-		return result;
+		User oldUser = userMapper.getUser(user.getUname());
+		if(oldUser!=null) {
+			return 0;
+		}else {
+			//默认时间处理
+			Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+			user.setUtime(timestamp);
+			int result = userMapper.insert(user);
+			return result;
+		}
 	}
 
 

@@ -1,7 +1,9 @@
 package dao;
 
 import java.util.List;
+import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import pojo.Comment;
@@ -56,4 +58,6 @@ public interface CommentMapper {
     int updateByPrimaryKey(Comment record);
 
 	List<Comment> selectAll(Comment comment);
+
+	List<Map> getCommentAndUser(@Param("tid")Integer tid,@Param("size")Integer size);
 }

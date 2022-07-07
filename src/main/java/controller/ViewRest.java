@@ -64,7 +64,7 @@ public class ViewRest {
 			System.out.println(result_sim);
 			return result_sim;
 		}else {
-			result_sim.setCode(200);
+			result_sim.setCode(201);
 			result_sim.setMessage("添加失败");
 			result_sim.setSuccess(false);
 			result_sim.setData(null);

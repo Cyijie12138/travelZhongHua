@@ -45,4 +45,6 @@ public interface TravelsMapper {
 	int updateByPrimaryKey(Travels record);
 
 	List<Travels> selecAll(Travels travels);
+
+	List<Travels> selectTravelsBySort(String nowDays);
 }

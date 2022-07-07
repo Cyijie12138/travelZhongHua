@@ -141,4 +141,8 @@
   			and uid = #{uid}
   		</if>
   </select>
+  
+  <select id="getCommentAndUser" parameterType="java.lang.Integer" resultType="map">
+  		SELECT * FROM comment c LEFT JOIN user u on u.uid = c.uid WHERE 1=1 and tid=#{tid} order by ctime desc limit #{size}
+  </select>
 </mapper>
